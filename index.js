@@ -105,19 +105,19 @@ function Baby(name, age, toy) {
   Person.call(this, name, age);
   this.favoriteToy = toy;
 }
-Baby.prototype.play = function(){
+Baby.prototype = Object.create(Person.prototype);
+Baby.prototype.play = function () {
   return `Playing with ${this.favoriteToy}`;
 }
 
-Baby.prototype = Object.create(Person.prototype);
 
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Window Binding - 
+  2. Implicit Binding - 
+  3. New Binding - 
+  4. Explicit Binding - 
 */
 
 
